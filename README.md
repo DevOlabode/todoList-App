@@ -3,12 +3,12 @@
 A simple and visually appealing ToDo List application built using HTML, CSS, and JavaScript. This project allows users to add, edit, mark as completed, and delete tasks.
 
 ## Features
-- Add new tasks to the list
-- Edit existing tasks
-- Mark tasks as completed with a checkbox
-- Delete tasks from the list
-- Responsive design for different screen sizes
-- Styled using Google Fonts and Font Awesome icons
+- Add new tasks to the list.
+- Edit existing tasks.
+- Mark tasks as completed with a checkbox.
+- Delete tasks from the list.
+- Responsive design for different screen sizes.
+- Styled using Google Fonts and Font Awesome icons.
 
 ## Technologies Used
 - HTML
@@ -32,9 +32,12 @@ A simple and visually appealing ToDo List application built using HTML, CSS, and
 3. Open `todoListApp.html` in a browser.
 4. Start adding your tasks!
 
-##Screenshot
+## Screenshot  
+<img src="Images/todoList Initial.png"/>
+<img src="Images/todoList complete.png"/>
+<img src="Images/todoList complete 2.png"/>
 
-## Demo
+## Live Demo
 You can see a live demo of the project [here](#).
 
 ## Author
