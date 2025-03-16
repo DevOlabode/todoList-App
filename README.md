@@ -38,7 +38,7 @@ A simple and visually appealing ToDo List application built using HTML, CSS, and
 <img src="Images/todoList complete 2.png"/>
 
 ## Live Demo
-You can see a live demo of the project [here](#).
+You can see a live demo of the project [here](https://codepen.io/DevOlabode/full/MYgGqbd).
 
 ## Author
 Made by [Samuel Olabode](https://github.com/devOlabode).
