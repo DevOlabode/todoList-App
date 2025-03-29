@@ -23,7 +23,7 @@ A simple and visually appealing ToDo List application built using HTML, CSS, and
 ## How to Use
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/todo-list-app.git
+   git clone https://github.com/DevOlabode/todo-list-app.git
    ```
 2. Navigate to the project folder:
    ```bash
