@@ -32,14 +32,16 @@ A simple and visually appealing ToDo List application built using HTML, CSS, and
 3. Open `todoListApp.html` in a browser.
 4. Start adding your tasks!
 
+## Live Demo
+- You can see a live demo of the project [here](https://codepen.io/DevOlabode/full/MYgGqbd).
+
+- Live Link : [here](https://todo-list-52grzg36b-samuel-olabodes-projects.vercel.app/)
+
 ## Screenshot  
 <img src="Images/todoList Initial.png"/>
 <img src="Images/todoList complete.png"/>
 <img src="Images/todoList complete 2.png"/>
 
-## Live Demo
-You can see a live demo of the project [here](https://codepen.io/DevOlabode/full/MYgGqbd).
-Live Link : [here](https://todo-list-52grzg36b-samuel-olabodes-projects.vercel.app/)
 
 ## Author
 Made by [Samuel Olabode](https://github.com/devOlabode).
