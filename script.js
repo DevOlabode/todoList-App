@@ -5,7 +5,9 @@ const todoListDiv= document.querySelector('#todoListDiv');
 const errorMessage = document.querySelector('#error');
 const footer  = document.querySelector('footer');
 
-todoEnterButton.addEventListener('click', function(){
+todoEnterButton.addEventListener('click', function(e){
+
+  e.preventDefault();
 
     if(todoEnter.value === ''){
         errorMessage.textContent = '⚠️ Please enter a valid todo.'
@@ -14,12 +16,12 @@ todoEnterButton.addEventListener('click', function(){
             errorMessage.style.display = 'none';
         }, 1000);
     }else{
-    const todoListLI = document.createElement('li')
+  const todoListLI = document.createElement('li')
     todoListLI.textContent = todoEnter.value;
     todoListUL.append(todoListLI)
     todoEnter.value=''
   
-   const editButton = document.createElement('button')
+  const editButton = document.createElement('button')
     editButton.classList.add('fas', 'fa-edit', 'icon')
     todoListLI.appendChild(editButton)
 
@@ -39,9 +41,7 @@ todoEnterButton.addEventListener('click', function(){
             todoListLI.remove()
             deleteButton.remove()
             editButton.remove()
-    })
-
-   
+    });   
   
   const completedCheckbox = document.createElement('input')
   completedCheckbox.type = 'checkbox'
@@ -76,4 +76,4 @@ todoEnterButton.addEventListener('click', function(){
     }
   });   
 } 
-})
+});
