@@ -7,3 +7,9 @@ body {
   padding: 0;
 };
 
+#header {
+  background-color: #59A5D8;
+  color: white;
+  text-align: center;
+  padding: 20px;
+};
