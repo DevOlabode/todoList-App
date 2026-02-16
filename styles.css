@@ -21,7 +21,7 @@
   box-sizing: border-box;
 }
 
-body, html {
+body, html {   
   font-family: "Arimo", sans-serif;
   margin: 0;
   padding: 0;
@@ -62,7 +62,7 @@ main {
 }
 
 /* ===== Form & Input Section ===== */
-#todoForm {
+form {
   display: flex;
   gap: 12px;
   margin-bottom: 24px;
@@ -141,9 +141,10 @@ main {
   padding: 24px;
   box-shadow: 0 8px 32px var(--shadow-lg);
   min-height: 200px;
-}
+} */
 
-#todoListDiv:empty::after {
+/* #todoListDiv:empty::after,
+#todoList:empty::after {
   content: "No todos yet. Add one above!";
   display: block;
   text-align: center;
@@ -170,6 +171,7 @@ main {
   margin-bottom: 10px;
   transition: var(--transition);
   border: 1px solid #e2e8f0;
+  flex-wrap: wrap;
 }
 
 #todoList li:last-child {
@@ -181,8 +183,8 @@ main {
   border-color: var(--light-blue);
 }
 
-/* ===== Custom Checkbox ===== */
-#todoList li .todo-checkbox {
+/* ===== Checkbox Styling ===== */
+#todoList li input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
   width: 20px;
@@ -194,14 +196,15 @@ main {
   transition: var(--transition);
   position: relative;
   background: var(--white);
+  order: 1;
 }
 
-#todoList li .todo-checkbox:checked {
+#todoList li input[type="checkbox"]:checked {
   background: var(--success);
   border-color: var(--success);
 }
 
-#todoList li .todo-checkbox:checked::after {
+#todoList li input[type="checkbox"]:checked::after {
   content: "✓";
   position: absolute;
   top: 50%;
@@ -212,36 +215,13 @@ main {
   font-weight: bold;
 }
 
-#todoList li .todo-checkbox:hover {
+#todoList li input[type="checkbox"]:hover {
   border-color: var(--dark-blue);
 }
 
-#todoList li .todo-checkbox:focus {
+#todoList li input[type="checkbox"]:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(132, 210, 246, 0.3);
-}
-
-/* ===== Todo Text ===== */
-#todoList li .todo-text {
-  flex: 1;
-  font-size: 1rem;
-  color: var(--deep-blue);
-  word-break: break-word;
-  transition: var(--transition);
-  padding: 2px 0;
-}
-
-/* ===== Completed State ===== */
-#todoList li.completed {
-  opacity: 0.6;
-  background: #f0f4f8;
-}
-
-#todoList li.completed .todo-text {
-  text-decoration: line-through;
-  text-decoration-color: var(--dark-blue);
-  text-decoration-thickness: 2px;
-  color: var(--dark-blue);
 }
 
 /* ===== Action Buttons (Edit & Delete) ===== */
@@ -257,26 +237,28 @@ main {
   justify-content: center;
   min-width: 36px;
   height: 36px;
+  order: 3;
+  margin-left: auto;
 }
 
-#todoList li .edit-btn {
+#todoList li .fa-edit {
   background: rgba(89, 165, 216, 0.15);
   color: var(--mid-blue);
   margin-right: 4px;
 }
 
-#todoList li .edit-btn:hover {
+#todoList li .fa-edit:hover {
   background: var(--mid-blue);
   color: var(--white);
   transform: scale(1.05);
 }
 
-#todoList li .delete-btn {
+#todoList li .fa-trash-alt {
   background: rgba(231, 76, 60, 0.1);
   color: var(--danger);
 }
 
-#todoList li .delete-btn:hover {
+#todoList li .fa-trash-alt:hover {
   background: var(--danger);
   color: var(--white);
   transform: scale(1.05);
@@ -286,15 +268,6 @@ main {
   opacity: 0.4;
   cursor: not-allowed;
   transform: none;
-}
-
-/* ===== Empty State ===== */
-#todoListDiv .empty-state {
-  text-align: center;
-  padding: 40px 20px;
-  color: var(--dark-blue);
-  opacity: 0.6;
-  font-style: italic;
 }
 
 /* ===== Footer ===== */
@@ -336,7 +309,7 @@ footer a:hover {
     margin-bottom: 24px;
   }
 
-  #todoForm {
+  form {
     flex-direction: column;
     gap: 10px;
   }
@@ -357,25 +330,9 @@ footer a:hover {
   #todoList li {
     padding: 12px;
     gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  #todoList li .todo-text {
-    flex: 1 1 auto;
-    min-width: 100px;
-    order: 2;
-  }
-
-  #todoList li .todo-checkbox {
-    order: 1;
   }
 
   #todoList li .icon {
-    order: 3;
-  }
-
-  #todoList li .edit-btn,
-  #todoList li .delete-btn {
     min-width: 32px;
     height: 32px;
     padding: 6px 8px;
@@ -386,27 +343,6 @@ footer a:hover {
 @media (max-width: 400px) {
   #header {
     font-size: 1.75rem;
-  }
-
-  #todoList li {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  #todoList li .todo-text {
-    width: 100%;
-    order: 2;
-  }
-
-  #todoList li .todo-checkbox {
-    order: 1;
-  }
-
-  #todoList li .icon {
-    order: 3;
-    display: inline-flex;
-    margin-right: 8px;
   }
 }
 
@@ -449,7 +385,7 @@ footer a:hover {
 #todoEnter:focus-visible,
 #enterButton:focus-visible,
 .icon:focus-visible,
-#todoList li .todo-checkbox:focus-visible {
+#todoList li input[type="checkbox"]:focus-visible {
   outline: 2px solid var(--primary-blue);
   outline-offset: 2px;
 }
