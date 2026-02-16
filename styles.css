@@ -10,12 +10,18 @@
   --white: #ffffff;
   --danger: #e74c3c;
   --success: #2ecc71;
+  --dark : #0d1b2a;
   --shadow: rgba(19, 60, 85, 0.2);
   --transition: all 0.3s ease;
 }
 
-/* var(--shadow) */
-
 body, html {
-  background : var(--mid-blue);
+  font-family : "Arimo", sans-serif;
+  color : var(--dark);
+  text-align: center;
+  margin-top : 20px;
+  font-weight : 900;
+  font-style : normal;
+  font-optical-sizing : auto;
 }
+
