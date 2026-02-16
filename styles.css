@@ -1,12 +1,21 @@
 /* color pallette for this project : #84D2F6, #91E5F6, #59A5D8, #386FA4, #133C55 */
 
-html, body {
-  font-family: 'Arimo', sans-serif;
-  background-color: #84D2F6;
-  margin: 0;
-  padding: 0;
-};
+/* ===== CSS Variables ===== */
+:root {
+  --primary-blue: #84D2F6;
+  --light-blue: #91E5F6;
+  --mid-blue: #59A5D8;
+  --dark-blue: #386FA4;
+  --deep-blue: #133C55;
+  --white: #ffffff;
+  --danger: #e74c3c;
+  --success: #2ecc71;
+  --shadow: rgba(19, 60, 85, 0.2);
+  --transition: all 0.3s ease;
+}
 
-main #header {
-  color : #91E5F6;
+/* var(--shadow) */
+
+body, html {
+  background : var(--mid-blue);
 }
