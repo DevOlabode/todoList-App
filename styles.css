@@ -15,7 +15,7 @@
 
 body, html {
   font-family : "Arimo", sans-serif;
-  color : var(--dark);
+  color : var(--deep-blue);
   text-align: center;
   margin-top : 20px;
   font-weight : 900;
@@ -24,5 +24,10 @@ body, html {
 }
 
 #todoListDiv {
-  
+  border : 2px solid var(--white);
+  border-radius : 10px;
+  margin : 20px -6em 0px 70px;
+  padding : 20px;
+  background-color : var();
 }
+
