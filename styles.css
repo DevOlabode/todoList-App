@@ -1,5 +1,3 @@
-/* color pallette for this project : #84D2F6, #91E5F6, #59A5D8, #386FA4, #133C55 */
-
 /* ===== CSS Variables ===== */
 :root {
   --primary-blue: #84D2F6;
@@ -25,3 +23,6 @@ body, html {
   font-optical-sizing : auto;
 }
 
+#todoListDiv {
+  
+}
